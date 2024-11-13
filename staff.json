@@ -1,0 +1,5 @@
+{
+    "12345678": { "name": "Ahmad", "department": "IT", "head": "Ibu Siti" },
+    "87654321": { "name": "Budi", "department": "HR", "head": "Bapak Hasan" },
+    "56781234": { "name": "Siti", "department": "Finance", "head": "Ibu Dewi" }
+}
