@@ -97,6 +97,12 @@ function moveCircle(circle) {
         dx = (Math.random() - 0.5) * 4;
         dy = (Math.random() - 0.5) * 4;
     }
+    else if (circle.id === "circle-1") {
+        x = 300;
+        y = 300;
+        dx = (Math.random() - 0.5) * 4;
+        dy = (Math.random() - 0.5) * 4;
+    }
 
     function animate() {
         x += dx;
@@ -115,3 +121,4 @@ function moveCircle(circle) {
 
 const circle1 = document.getElementById("circle-1");
 moveCircle(circle1);
+moveCircle(circle2);
