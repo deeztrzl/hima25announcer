@@ -120,5 +120,6 @@ function moveCircle(circle) {
 }
 
 const circle1 = document.getElementById("circle-1");
+const circle2 = document.getElementById("circle-2");
 moveCircle(circle1);
 moveCircle(circle2);
