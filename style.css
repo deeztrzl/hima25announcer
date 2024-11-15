@@ -13,7 +13,11 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 20vh;
-    background: #ddd
+    background: #ddd;
+    background-image: url('path/to/5311.jpg'); /* Ganti dengan path gambar Anda */
+    background-size: cover; /* Menyelaraskan gambar agar menutupi seluruh area */
+    background-position: center; /* Memposisikan gambar di tengah */
+    background-repeat: no-repeat; /* Agar gambar tidak diulang */
     padding: 20px;
     overflow-x: hidden;
 }
