@@ -98,8 +98,8 @@ function moveCircle(circle) {
         dy = (Math.random() - 0.5) * 4;
     }
     else if (circle.id === "circle-2") {
-        x = 300;
-        y = 300;
+        x = 150;
+        y = 150;
         dx = (Math.random() - 0.5) * 4;
         dy = (Math.random() - 0.5) * 4;
     }
