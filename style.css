@@ -13,15 +13,16 @@ body {
     height: 100vh;
     background: linear-gradient(135deg, #f9f9f9, #ddd);
     overflow: hidden;
+    padding: 20px;
 }
 
 /* Logo Styling */
 .logo-container {
-    margin-bottom: 0px;
+    margin-bottom: 20px;
 }
 
 .logo { 
-    width: 150px; /* Sesuaikan ukuran logo */
+    width: 120px; 
     height: auto;
 }
 
@@ -33,6 +34,7 @@ body {
     border-radius: 20px;
     padding: 30px;
     max-width: 700px;
+    width: 100%;
     text-align: center;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -46,26 +48,27 @@ h1 {
 
 .input-container {
     display: flex;
+    flex-direction: column;
     gap: 10px;
     margin-bottom: 20px;
 }
 
 input {
-    flex: 1;
     padding: 10px;
     border-radius: 10px;
     border: 1px solid #ddd;
     outline: none;
+    width: 100%;
 }
 
 button {
-    padding: 10px 15px;
+    padding: 12px;
     border: none;
     border-radius: 10px;
     background-color: #ff7f00;
     color: white;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
@@ -80,13 +83,13 @@ button:hover {
 }
 
 #clear-btn {
-    padding: 10px 15px;
+    padding: 12px;
     border: none;
     border-radius: 10px;
     background-color: #aaa;
     color: white;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 #clear-btn:hover {
@@ -99,7 +102,52 @@ button:hover {
     position: absolute;
     border-radius: 50%;
     background: rgba(255, 165, 0, 0.5);
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     z-index: 1;
+    animation: move 10s infinite ease-in-out;
+}
+
+/* Media Queries for Responsive Design */
+
+/* Tablet (Landscape & Portrait) */
+@media (min-width: 600px) {
+    .logo {
+        width: 140px;
+    }
+    .glass-container {
+        max-width: 600px;
+    }
+    .input-container {
+        flex-direction: row;
+        gap: 10px;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .logo {
+        width: 150px;
+    }
+    .glass-container {
+        max-width: 700px;
+        padding: 40px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 599px) {
+    .glass-container {
+        padding: 20px;
+    }
+    .circle {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/* Circle Animation Keyframes */
+@keyframes move {
+    0%, 100% { transform: translate(-50px, -50px); }
+    50% { transform: translate(50px, 50px); }
 }
