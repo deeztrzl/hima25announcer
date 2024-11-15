@@ -309,6 +309,18 @@ table th {
         margin-bottom: 10px;
     }
 }
+    /* Media Query untuk Perangkat Mobile (Portrait) */
+@media (max-width: 768px) and (orientation: portrait) {
+    body {
+        background-size: contain; /* Menyesuaikan ukuran gambar */
+        background-position: center;
+        transform: rotate(90deg); /* Memutar background 90 derajat */
+        transform-origin: center center; /* Titik asal rotasi di tengah */
+        height: 100vw; /* Sesuaikan tinggi agar tidak terpotong */
+        width: 100vh; /* Sesuaikan lebar agar tidak terpotong */
+        overflow: hidden; /* Menghindari scrollbar yang tidak perlu */
+    }
+}
 
 @media (max-width: 480px) {
     body {
