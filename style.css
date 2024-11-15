@@ -12,15 +12,15 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 20vh;
-    background: #ddd;
+    min-height: 100vh; /* Menutupi seluruh tinggi viewport */
     background-image: url('/5311.jpg'); /* Ganti dengan path gambar Anda */
-    background-size: cover; /* Menyelaraskan gambar agar menutupi seluruh area */
+    background-size: cover; /* Menutupi seluruh area tanpa terdistorsi */
     background-position: center; /* Memposisikan gambar di tengah */
     background-repeat: no-repeat; /* Agar gambar tidak diulang */
+    background-attachment: fixed; /* Agar gambar tetap pada posisinya saat scrolling */
     padding: 20px;
     overflow-x: hidden;
-}
+    color: #333; /* Warna teks default agar tetap terbaca di atas background */
 
 /* Logo Styling */
 .logo-container {
@@ -187,8 +187,13 @@ table th {
     white-space: nowrap;
 }
 
+
 /* Mobile Responsive Styles */
 @media screen and (max-width: 768px) {
+    body {
+        background-position: top; /* Posisikan gambar di bagian atas pada layar yang lebih kecil */
+        padding: 10px;
+    }
     .table-wrapper {
         flex-direction: column;
         padding: 5px;
@@ -265,6 +270,10 @@ table th {
 
 /* Desktop */
 @media (min-width: 1024px) {
+    body {
+        background-size: contain; /* Gambar akan diskalakan dengan menjaga aspek rasio */
+        background-attachment: scroll; /* Nonaktifkan fixed pada tablet */
+    }
     .logo {
         width: 150px;
     }
@@ -302,6 +311,11 @@ table th {
 }
 
 @media (max-width: 480px) {
+    body {
+        background-size: cover;
+        background-position: center;
+        padding: 5px;
+    }
     h1 {
         font-size: 24px;
     }
