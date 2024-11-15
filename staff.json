@@ -1,5 +1,5 @@
 {
-    "12345678": { "name": "Ahmad", "department": "IT", "head": "Ibu Siti" },
-    "87654321": { "name": "Budi", "department": "HR", "head": "Bapak Hasan" },
-    "56781234": { "name": "Siti", "department": "Finance", "head": "Ibu Dewi" }
+    "12345678": { "name": "Ahmad Wijaya Sukma Raden Wiranto Widodo", "department": "Sekretaris BE", "institution": "Eksekutif" },
+    "87654321": { "name": "Budi", "department": "Bendahara BL", "institution": "Legislatif" },
+    "56781234": { "name": "Siti", "department": "Komunikasi & Informasi", "institution": "Eksekutif" }
 }

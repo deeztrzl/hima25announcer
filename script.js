@@ -1,6 +1,8 @@
+// script.js
 let staffData = {};
+let departmentData = {};
 
-// Fetch data from staff.json
+// Fetch staff data
 async function loadStaffData() {
     try {
         const response = await fetch('/staff.json');
@@ -13,85 +15,93 @@ async function loadStaffData() {
     }
 }
 
-// Load staff data on page load
-loadStaffData();
+// Fetch department data
+async function loadDepartmentData() {
+    try {
+        const response = await fetch('/departemen.json');
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        departmentData = await response.json();
+    } catch (error) {
+        console.error('Error fetching department data:', error);
+    }
+}
 
+// Load all data on page load
+async function loadData() {
+    await loadStaffData();
+    await loadDepartmentData();
+}
 
-// Search NIM functionality
+loadData();
+
+// Main function to check NIM and display results
 function checkNim() {
     const nimInput = document.getElementById("nim-input").value.trim();
     const resultDiv = document.getElementById("result");
 
     if (nimInput in staffData) {
         const staff = staffData[nimInput];
-        let headContactLink;
-
-        // Switch case untuk menentukan hyperlink berdasarkan nama kepala departemen
-        switch (staff.head) {
-            case 'Ibu Siti':
-                headContactLink = 'https://wa.me/6285183303124';
-                break;
-            case 'Bapak Hasan':
-                headContactLink = 'mailto:bapak.hasan@example.com';
-                break;
-            case 'Ibu Dewi':
-                headContactLink = 'mailto:ibu.dewi@example.com';
-                break;
-            default:
-                headContactLink = `mailto:${staff.head}@example.com`;
-                break;
-        }
+        const departmentInfo = departmentData[staff.department];
+        
+        // Save NIM to localStorage for use in partners.html
+        localStorage.setItem('selectedNim', nimInput);
+        
+       
+        
+        // Determine head contact link
+        // Get contact link directly from department data
+        const headContactLink = departmentInfo?.contact ? 
+            `https://${departmentInfo.contact}` : 
+            'https://wa.me/628123456789'; // default fallback
 
         resultDiv.innerHTML = `
-            Selamat ${staff.name}! Kamu telah diterima sebagai staff ${staff.department}.<br>
-            Hubungi Kepala Departemenmu: <br>
-            <button onclick="window.location.href='${headContactLink}'">Hubungi ${staff.head}</button>
+            Selamat <b><i>${staff.name}</i></b>! Kamu telah diterima sebagai <b>staff ${staff.department}</b>.<br>
+            <br>Hubungi Kepala Departemenmu: <br>
+            <button class="contact-button" onclick="window.location.href='${headContactLink}'">Hubungi ${departmentInfo?.head}</button> <br>
+            <button class="contact-button" onclick="showPartners()">Lihat Partnermu</button>
         `;
-        resultDiv.innerHTML.style.color = "#fffff";
+        resultDiv.style.color = "black";
     } else {
         resultDiv.textContent = "Maaf, Kami tidak menemukan apa yang Anda cari. Terima kasih atas partisipasinya!";
         resultDiv.style.color = "#dc3545";
     }
 }
 
-// Tambahkan event listener pada input field
-document.getElementById('nim-input').addEventListener('keyup', function(event) {
-    // Jika tombol yang ditekan adalah Enter
-    if (event.key === 'Enter') {
-        // Panggil fungsi checkNim()
-        checkNim();
-    }
-});
-
+// Clear search results
 function clearResult() {
     document.getElementById("nim-input").value = "";
     document.getElementById("result").textContent = "";
 }
 
+// Navigate to partners page
+function showPartners() {
+    window.location.href = 'partners.html';
+}
 
-// Circle bouncing animation
+// Enter key event listener
+document.getElementById('nim-input').addEventListener('keyup', function(event) {
+    if (event.key === 'Enter') {
+        checkNim();
+    }
+});
+
+// Circle animation code
 function moveCircle(circle) {
     let x, y, dx, dy;
 
-    // Set the initial position of the circles
     if (circle.id === "circle-1") {
-        x = 50; // Left of the window
-        y = 50; // Top of the window
+        x = 50;
+        y = 50;
         dx = (Math.random() - 0.5) * 4;
         dy = (Math.random() - 0.5) * 4;
-    } 
-    /*else if (circle.id === "circle-2") {
-        x = 150; // Right of the window
-        y = 150; // Bottom of the window
-        dx = (Math.random() - 0.5) * 4;
-        dy = (Math.random() - 0.5) * 4;
-    }*/
+    }
 
     function animate() {
         x += dx;
         y += dy;
 
-        // Collision detection
         if (x + circle.offsetWidth > window.innerWidth || x < 0) dx = -dx;
         if (y + circle.offsetHeight > window.innerHeight || y < 0) dy = -dy;
 
@@ -103,8 +113,5 @@ function moveCircle(circle) {
     animate();
 }
 
-// Apply the bouncing animation to the circles
 const circle1 = document.getElementById("circle-1");
-//const circle2 = document.getElementById("circle-2");
 moveCircle(circle1);
-//moveCircle(circle2);

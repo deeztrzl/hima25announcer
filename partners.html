@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kepengurusan HIMATRONIKA-AI 2024/2025</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="glass-container">
+        <h1>Kepengurusan HIMATRONIKA-AI 2024/2025</h1>
+
+        <!-- Dropdown untuk memilih departemen -->
+        <label for="department-select">Pilih Departemen:</label>
+        <select id="department-select" class="custom-dropdown">
+            <option value="">-- Pilih Departemen --</option>
+        </select>
+
+        <!-- Tempat untuk menampilkan judul departemen dan tabel anggota -->
+        <div id="table-container">
+            <h2 id="department-name"></h2>
+            <div id="department-head"></div>
+            <table id="staff-table" class="department-table">
+                <thead>
+                    <tr>
+                        <th>NIM</th>
+                        <th>Nama</th>
+                    </tr>
+                </thead>
+                <tbody id="staff-body"></tbody>
+            </table>
+        </div>
+        <button class="back-button" onclick="window.location.href='https://www.linkedin.com/posts/keyzar-athallah_pengumuman-pengurus-activity-7153654317676118016-PeHq/'">Cek File</button>
+        <button class="back-button" onclick="window.history.back()">Kembali</button>
+    </div>
+
+    <script src="partners.js"></script>
+</body>
+</html>

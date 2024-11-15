@@ -1,3 +1,4 @@
+/* Reset CSS */
 * {
     margin: 0;
     padding: 0;
@@ -5,15 +6,16 @@
     font-family: 'Poppins', sans-serif;
 }
 
+/* Body Style */
 body {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background: linear-gradient(135deg, #f9f9f9, #ddd);
-    overflow: hidden;
+    min-height: 20vh;
+    background: #ddd
     padding: 20px;
+    overflow-x: hidden;
 }
 
 /* Logo Styling */
@@ -21,19 +23,18 @@ body {
     margin-bottom: 20px;
 }
 
-.logo { 
-    width: 120px; 
+.logo {
+    width: 120px;
     height: auto;
 }
 
-/* Glassmorphism Style */
+/* Glassmorphism Container Style */
 .glass-container {
-    position: relative;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(15px);
     border-radius: 20px;
     padding: 30px;
-    max-width: 700px;
+    max-width: 800px;
     width: 100%;
     text-align: center;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
@@ -46,6 +47,7 @@ h1 {
     margin-bottom: 20px;
 }
 
+/* Input dan Tombol Style */
 .input-container {
     display: flex;
     flex-direction: column;
@@ -83,17 +85,145 @@ button:hover {
 }
 
 #clear-btn {
+    background-color: #aaa;
+}
+
+#clear-btn:hover {
+    background-color: #888;
+}
+
+/* Tombol Hubungi dan Lihat Partnermu */
+.contact-button {
+    margin-top: 10px;
+}
+
+/* Responsif untuk Tombol di Halaman Utama */
+.partner-button {
+    background-color: #ff7f00;
+    margin-left: 10px;
+}
+
+.partner-button:hover {
+    background-color: #db6d00;
+}
+
+/* Styling untuk dropdown */
+.custom-dropdown {
+    width: 100%;
+    padding: 10px;
+    margin: 20px 0;
+    border: 2px solid #ff7f00;
+    border-radius: 8px;
+    background-color: #f0f8ff;
+    font-size: 1rem;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Styling saat dropdown aktif/fokus */
+.custom-dropdown:focus,
+.custom-dropdown:hover {
+    border-color: #cc6600;
+    background-color: #e8f4fd;
+}
+
+/* Styling untuk judul departemen */
+#department-name {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #ff7f00;
+}
+
+/* Styling untuk kepala departemen */
+#department-head {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Table Wrapper Styles */
+.table-wrapper {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+    overflow-x: auto;
+    padding: 10px;
+}
+
+.table-container {
+    flex: 1;
+    min-width: 300px; /* Minimum width for table container */
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+table th,
+table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+table th {
+    background-color: #ff7f00;
+    color: white;
+    white-space: nowrap;
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+    .table-wrapper {
+        flex-direction: column;
+        padding: 5px;
+    }
+    
+    .table-container {
+        margin: 10px 0;
+        padding: 10px;
+        width: 100%;
+        overflow-x: auto;
+    }
+    
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    
+    table th,
+    table td {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
+/* Tombol Kembali di partners.html */
+.back-button {
+    margin-top: 20px;
     padding: 12px;
     border: none;
     border-radius: 10px;
-    background-color: #aaa;
+    background-color: #888;
     color: white;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-#clear-btn:hover {
-    background-color: #888;
+.back-button:hover {
+    background-color: #555;
     transform: scale(1.05);
 }
 
@@ -105,22 +235,27 @@ button:hover {
     width: 150px;
     height: 150px;
     z-index: 1;
-    animation: move 10s infinite ease-in-out;
 }
 
-/* Media Queries for Responsive Design */
+/* Media Queries untuk Responsiveness */
 
 /* Tablet (Landscape & Portrait) */
 @media (min-width: 600px) {
     .logo {
         width: 140px;
     }
+
     .glass-container {
         max-width: 600px;
     }
+
     .input-container {
         flex-direction: row;
         gap: 10px;
+    }
+
+    .contact-button, .partner-button {
+        margin-bottom: 0;
     }
 }
 
@@ -129,8 +264,9 @@ button:hover {
     .logo {
         width: 150px;
     }
+
     .glass-container {
-        max-width: 700px;
+        max-width: 800px;
         padding: 40px;
     }
 }
@@ -140,11 +276,59 @@ button:hover {
     .glass-container {
         padding: 20px;
     }
+
+    table {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+
     .circle {
         width: 100px;
         height: 100px;
     }
+
+    .contact-button, .partner-button {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+    }
 }
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    th, td {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .back-button {
+        width: 100%;
+    }
+    .table-container {
+        padding: 5px;
+        border-radius: 5px;
+    }
+    
+    table th,
+    table td {
+        padding: 6px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .table-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 
 /* Circle Animation Keyframes */
 @keyframes move {
