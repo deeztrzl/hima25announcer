@@ -36,6 +36,18 @@ async function loadData() {
 
 loadData();
 
+const hamMenu = document.querySelector('.ham-menu');
+hamMenu.addEventListener('click', () => {
+    hamMenu.classList.toggle("active");
+})
+
+const offScreenMenu = document.querySelector('.off-screen-menu');
+
+hamMenu.addEventListener('click', () => {
+    hamMenu.classList.toggle("active");
+    offScreenMenu.classList.toggle('active');
+})
+
 // Main function to check NIM and display results
 function checkNim() {
     const nimInput = document.getElementById("nim-input").value.trim();
@@ -97,12 +109,6 @@ function moveCircle(circle) {
         dx = (Math.random() - 0.5) * 4;
         dy = (Math.random() - 0.5) * 4;
     }
-    else if (circle.id === "circle-2") {
-        x = 150;
-        y = 150;
-        dx = (Math.random() - 0.5) * 4;
-        dy = (Math.random() - 0.5) * 4;
-    }
 
     function animate() {
         x += dx;
@@ -120,6 +126,4 @@ function moveCircle(circle) {
 }
 
 const circle1 = document.getElementById("circle-1");
-const circle2 = document.getElementById("circle-2");
 moveCircle(circle1);
-moveCircle(circle2);

@@ -12,15 +12,81 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Menutupi seluruh tinggi viewport */
-    background-image: url('/5311.jpg'); /* Ganti dengan path gambar Anda */
-    background-size: cover; /* Menutupi seluruh area tanpa terdistorsi */
-    background-position: center; /* Memposisikan gambar di tengah */
-    background-repeat: no-repeat; /* Agar gambar tidak diulang */
-    background-attachment: fixed; /* Agar gambar tetap pada posisinya saat scrolling */
+    min-height: 20vh;
+    background: #ddd
     padding: 20px;
     overflow-x: hidden;
-    color: #333; /* Warna teks default agar tetap terbaca di atas background */
+}
+
+nav {
+    padding: 1rem;
+    display: flex;
+    background: #888;
+}
+
+.off-screen-menu {
+    background-color: #333;
+    height: 100vh;
+    width: 100%;
+    max-width: 450px;
+    position: fixed;
+    top: 0;
+    right: -450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 3rem;
+    transition: .3s ease;
+}
+.off-screen-menu.active {
+    right: 0;
+}
+
+.ham-menu {
+    height: 50px;
+    width: 50px;
+    margin-left: auto;
+    position: relative;
+}
+.ham-menu span {
+    height: 5px;
+    width: 100%;
+    background-color: #e56c00;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s ease;
+}
+
+.ham-menu span:nth-child(1) {
+    top: 25%;
+}
+
+.ham-menu span:nth-child(3) {
+    top: 75%;
+}
+
+.ham-menu.active span:nth-child(3){
+    top: 50%;
+    transform: 
+        translate(-50%, -50%)
+        rotate(-45deg);
+}
+
+.ham-menu.active span:nth-child(2){
+    opacity: 0;
+}
+
+.ham-menu.active span:nth-child(1){
+    top: 50%;
+    transform: 
+        translate(-50%, -50%)
+        rotate(45deg);
+}
 
 /* Logo Styling */
 .logo-container {
@@ -187,13 +253,8 @@ table th {
     white-space: nowrap;
 }
 
-
 /* Mobile Responsive Styles */
 @media screen and (max-width: 768px) {
-    body {
-        background-position: top; /* Posisikan gambar di bagian atas pada layar yang lebih kecil */
-        padding: 10px;
-    }
     .table-wrapper {
         flex-direction: column;
         padding: 5px;
@@ -270,10 +331,6 @@ table th {
 
 /* Desktop */
 @media (min-width: 1024px) {
-    body {
-        background-size: contain; /* Gambar akan diskalakan dengan menjaga aspek rasio */
-        background-attachment: scroll; /* Nonaktifkan fixed pada tablet */
-    }
     .logo {
         width: 150px;
     }
@@ -309,25 +366,8 @@ table th {
         margin-bottom: 10px;
     }
 }
-    /* Media Query untuk Perangkat Mobile (Portrait) */
-@media (max-width: 768px) and (orientation: portrait) {
-    body {
-        background-size: contain; /* Menyesuaikan ukuran gambar */
-        background-position: center;
-        transform: rotate(90deg); /* Memutar background 90 derajat */
-        transform-origin: center center; /* Titik asal rotasi di tengah */
-        height: 100vw; /* Sesuaikan tinggi agar tidak terpotong */
-        width: 100vh; /* Sesuaikan lebar agar tidak terpotong */
-        overflow: hidden; /* Menghindari scrollbar yang tidak perlu */
-    }
-}
 
 @media (max-width: 480px) {
-    body {
-        background-size: cover;
-        background-position: center;
-        padding: 5px;
-    }
     h1 {
         font-size: 24px;
     }
