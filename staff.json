@@ -1,12 +1,12 @@
 {
-    "12345678": { "name": "Ahmad Wijaya Sukma Raden Wiranto Widodo", "department": "Sekretaris BE", "institution": "Eksekutif" },
-    "12345671": { "name": "Ahmad Wijaya Sukma Raden Wiranto Widodo", "department": "Sekretaris BE", "institution": "Eksekutif" },
-    "12345672": { "name": "Ahmad Wijaya Sukma Raden Wiranto Widodo", "department": "Sekretaris BE", "institution": "Eksekutif" },
-    "12345673": { "name": "Ahmad Wijaya Sukma Raden Wiranto Widodo", "department": "Sekretaris BE", "institution": "Eksekutif" },
-    "12345674": { "name": "Ahmad Wijaya Sukma Raden Wiranto Widodo", "department": "Sekretaris BE", "institution": "Eksekutif" },
-    "12345675": { "name": "Ahmad Wijaya Sukma Raden Wiranto Widodo", "department": "Sekretaris BE", "institution": "Eksekutif" },
-    "12345676": { "name": "Ahmad Wijaya Sukma Raden Wiranto Widodo", "department": "Sekretaris BE", "institution": "Eksekutif" },
-    "12345677": { "name": "Ahmad Wijaya Sukma Raden Wiranto Widodo", "department": "Sekretaris BE", "institution": "Eksekutif" },
-    "87654321": { "name": "Budi", "department": "Bendahara BL", "institution": "Legislatif" },
-    "56781234": { "name": "Siti", "department": "Komunikasi & Informasi", "institution": "Eksekutif" }
-}
+    "1232425": {"name": "Kepala Department", "department": "", "institution": "Eksekutif" },
+    "2300062": { "name": "Abdul Rafi", "department": "Komunikasi & Informasi", "institution": "Eksekutif" },
+    "2305113": { "name": "Agnes Sabila Arrahma", "department": "Komunikasi & Informasi", "institution": "Eksekutif" },
+    "2400867": { "name": "Reifana Muhamad Al Kindi", "department": "Komunikasi & Informasi", "institution": "Eksekutif" },
+    "2401401": { "name": "Dwiky Jerryan Koryanto Muhammad", "department": "Komunikasi & Informasi", "institution": "Eksekutif" },
+    "2402756": { "name": "Aulia Aufa Zahron", "department": "Komunikasi & Informasi", "institution": "Eksekutif" },
+    "2403165": { "name": "Yasmin Tia Nizarini", "department": "Komunikasi & Informasi", "institution": "Eksekutif" },
+    "2404107": { "name": "Teresia Denia Primisani", "department": "Komunikasi & Informasi", "institution": "Eksekutif" },
+    "2404688": { "name": "Nayla Putri Ashfiya", "department": "Komunikasi & Informasi", "institution": "Eksekutif" }
+  }
+  
