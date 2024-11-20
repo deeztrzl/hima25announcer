@@ -3,33 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pengumuman Pengurus HIMATRONIKA-AI Periode 2025</title>
+    <title>Kepengurusan HIMATRONIKA-AI 2024/2025</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
     <!-- Logo HIMATRONIKA-AI -->
-    <div class="glass-container">
+    <div class="logo-container">
         <img src="LOGO HIMA.png" alt="Logo HIMATRONIKA-AI" class="logo">
     </div>
 
     <!-- Background Animation -->
-    <div class="" id="-1"></div>
-    <!-- <div class="" id="-2"></div> -->
-
-    <!-- Glassmorphism Container -->
+    <div class="circle" id="circle-1"></div>
+    <div class="circle" id="circle-2"></div>
     <div class="glass-container">
-        <h1>Pengumuman Pengurus HIMATRONIKA-AI Periode 2025</h1>
+        <h1>Kepengurusan HIMATRONIKA-AI 2024/2025</h1>
         <div class="input-container">
-            <input type="text" id="nim-input" placeholder="MASUKKAN NIM">
-            <button onclick="checkNim()">Cari</button>
+            <input type="text" id="nim-input" placeholder="Masukkan NIM">
+            <button onclick="checkNim()">Cek</button>
             <button id="clear-btn" onclick="clearResult()">Clear</button>
         </div>
-        <div id="result" class="result"></div>
+    </div>
+
+    <!-- Popup Container -->
+    <div id="result-popup" class="popup">
+        <div class="popup-content">
+            <h2>Hasil Pengumuman</h2>
+            <span class="popup-close" onclick="closePopup()">&times;</span>
+            <div id="result"></div>
+        </div>
     </div>
 
     <script src="script.js"></script>
-    <div>
+    <div style="color: #d7d7d7;">
         <br> © KOMINFO HIMATRONIKA-AI 2024/2025
     </div>
 </body>

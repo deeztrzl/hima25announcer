@@ -46,8 +46,8 @@ async function loadStaffAndDepartment() {
                     if (staff.department === selectedDepartment) {
                         const row = document.createElement('tr');
                         row.innerHTML = `
-                            <td>${nim}</td>
-                            <td>${staff.name}</td>
+                            <td><i>${nim}</i></td>
+                            <td><b>${staff.name}</b></td>
                         `;
                         staffBody.appendChild(row);
                     }
