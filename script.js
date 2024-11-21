@@ -111,7 +111,7 @@ function checkNim() {
         
         const headContactLink = departmentInfo?.contact ? 
             `https://${departmentInfo.contact}` : 
-            'https://wa.me/628123456789';
+            'https://wa.me/6287724068538';
 
         resultDiv.innerHTML = `
             Selamat <b><i>${staff.name}</i></b>! Anda telah diterima sebagai <b>staff ${staff.department} HIMATRONIKA-AI Periode 2024/2025</b>.<br>
