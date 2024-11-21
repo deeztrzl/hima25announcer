@@ -20,12 +20,12 @@
       "2400721": { "name": "Nafila Ajmal", "department": "Advokasi Kesejahteraan Mahasiswa", "institution": "Eksekutif" },
       "2400748": { "name": "Farah Aulia Kirana", "department": "Keilmuan dan Riset Teknologi", "institution": "Eksekutif" },
       "2400789": { "name": "Muhamad Rifai Ayatulloh", "department": "Keilmuan dan Riset Teknologi", "institution": "Eksekutif" },
-      "2400903": { "name": "Luthfi Bunga Nurmalasari", "department": "Bendahara", "institution": "Eksekutif" },
+      "2400903": { "name": "Luthfi Bunga Nurmalasari", "department": "Bendahara BE", "institution": "Eksekutif" },
       "2400920": { "name": "Muhammad Rifa Ardhan", "department": "Pengabdian Pada Masyarakat", "institution": "Eksekutif" },
       "2401084": { "name": "Sandy Arya Wiguna", "department": "Sosial Politik", "institution": "Eksekutif" },
       "2401249": { "name": "Bayu Aji Wahyu Utomo", "department": "Pengembangan Sumber Daya Organisasi", "institution": "Eksekutif" },
       "2401404": { "name": "Muhamad Nurhidayat", "department": "Kemitraan dan Ekonomi Kreatif", "institution": "Eksekutif" },
-      "2401678": { "name": "Nailah Khoirun Widad", "department": "Bendahara", "institution": "Eksekutif" },
+      "2401678": { "name": "Nailah Khoirun Widad", "department": "Bendahara BE", "institution": "Eksekutif" },
       "2402023": { "name": "Muhammad Khairul Irham Masruri", "department": "Pengembangan Sumber Daya Organisasi", "institution": "Eksekutif" },
       "2402730": { "name": "Kaylla Asyifa", "department": "Pengembangan Sumber Daya Organisasi", "institution": "Eksekutif" },
       "2402905": { "name": "Muhammad Nur Kahfi", "department": "Advokasi Kesejahteraan Mahasiswa", "institution": "Eksekutif" },
@@ -53,5 +53,14 @@
       "2407976": { "name": "Iqbal Novianto", "department": "Sosial Politik", "institution": "Eksekutif" },
       "2409181": { "name": "Navanza Varel A.M", "department": "Sosial Politik", "institution": "Eksekutif" },
       "2411157": { "name": "Mochammad Arya Lukmanul Hakim", "department": "Pengabdian Pada Masyarakat", "institution": "Eksekutif" }
+    "2301964": { "name": "Khairana Mazaya", "department": "Pengembangan Sumber Daya Manusia", "institution": "Eksekutif" },
+  "2400545": { "name": "Togar Meipiter Christopher Sinurat", "department": "Pengembangan Sumber Daya Manusia", "institution": "Eksekutif" },
+  "2401047": { "name": "Assya Nurhasanah", "department": "Pengembangan Sumber Daya Manusia", "institution": "Eksekutif" },
+  "2401168": { "name": "Roven Angger Djuha Al Haq", "department": "Pengembangan Sumber Daya Manusia", "institution": "Eksekutif" },
+  "2403154": { "name": "Muhammad Thoriq Salahudin Haryoto", "department": "Pengembangan Sumber Daya Manusia", "institution": "Eksekutif" },
+  "2404364": { "name": "Rafli Maulana", "department": "Pengembangan Sumber Daya Manusia", "institution": "Eksekutif" },
+  "2404873": { "name": "Elmo Erasmo", "department": "Pengembangan Sumber Daya Manusia", "institution": "Eksekutif" },
+  "2407608": { "name": "Melinda Azalia Fausta", "department": "Pengembangan Sumber Daya Manusia", "institution": "Eksekutif" },
+  "2407942": { "name": "Muhammad Haikal Alfaridzi", "department": "Pengembangan Sumber Daya Manusia", "institution": "Eksekutif" }
   }
   
